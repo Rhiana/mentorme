@@ -4,7 +4,7 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :name
       t.boolean :mentor
       t.boolean :mentee
-      t.interger :post_code
+      t.integer :post_code
       t.string :email
       t.string :tag_line
       t.string :meet_up
