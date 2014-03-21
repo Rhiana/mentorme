@@ -1,0 +1,57 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :mentor %><br>
+    <%= f.check_box :mentor %>
+  </div>
+  <div class="field">
+    <%= f.label :mentee %><br>
+    <%= f.check_box :mentee %>
+  </div>
+  <div class="field">
+    <%= f.label :post_code %><br>
+    <%= f.text_field :post_code %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_line %><br>
+    <%= f.text_field :tag_line %>
+  </div>
+  <div class="field">
+    <%= f.label :meet_up %><br>
+    <%= f.text_field :meet_up %>
+  </div>
+  <div class="field">
+    <%= f.label :catagory %><br>
+    <%= f.text_field :catagory %>
+  </div>
+  <div class="field">
+    <%= f.label :short_biography %><br>
+    <%= f.text_area :short_biography %>
+  </div>
+  <div class="field">
+    <%= f.label :what_do_you_want_to_achieve %><br>
+    <%= f.text_area :what_do_you_want_to_achieve %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

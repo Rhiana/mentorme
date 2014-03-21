@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mentor: false
+  mentee: false
+  post_code: 
+  email: MyString
+  tag_line: MyString
+  meet_up: MyString
+  catagory: MyString
+  short_biography: MyText
+  what_do_you_want_to_achieve: MyText
+
+two:
+  name: MyString
+  mentor: false
+  mentee: false
+  post_code: 
+  email: MyString
+  tag_line: MyString
+  meet_up: MyString
+  catagory: MyString
+  short_biography: MyText
+  what_do_you_want_to_achieve: MyText

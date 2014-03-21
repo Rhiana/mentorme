@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @profile.name %>
+</p>
+
+<p>
+  <strong>Mentor:</strong>
+  <%= @profile.mentor %>
+</p>
+
+<p>
+  <strong>Mentee:</strong>
+  <%= @profile.mentee %>
+</p>
+
+<p>
+  <strong>Post code:</strong>
+  <%= @profile.post_code %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <strong>Tag line:</strong>
+  <%= @profile.tag_line %>
+</p>
+
+<p>
+  <strong>Meet up:</strong>
+  <%= @profile.meet_up %>
+</p>
+
+<p>
+  <strong>Catagory:</strong>
+  <%= @profile.catagory %>
+</p>
+
+<p>
+  <strong>Short biography:</strong>
+  <%= @profile.short_biography %>
+</p>
+
+<p>
+  <strong>What do you want to achieve:</strong>
+  <%= @profile.what_do_you_want_to_achieve %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
