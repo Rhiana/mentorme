@@ -12,14 +12,14 @@ body {
 
 
 #welcome_page h1 {
-	color: #FF7100;
+	color: #A67C00;
 	font-size: 5em;
 }
 
 .sign_in_page {
 	background-color: rgba(255, 255, 255, .8);
-	color: #11421A;
-	border: #FF7100 solid 3px;
+	color: #006561;
+	border: #A67C00 solid 3px;
 	border-radius: 25px;
 	width: 50%;
 	margin: 10% 25%;
@@ -27,7 +27,7 @@ body {
 }
 
 .sign_in_page h2 {
-	border-bottom: #FF7100 solid 3px;
+	border-bottom: #A67C00 solid 3px;
 	padding: 1em;
 }
 
@@ -41,8 +41,4 @@ body {
 p {
 	text-align: left;
 	padding: 1em;
-}
-
-#profile_search {
-	height: 702px;
 }

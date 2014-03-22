@@ -25,11 +25,12 @@
 
 .search {
 	background-color: #FFBF00;
-	height: 600px;
 }
 
-.mentors {
-	height: 600px;
+.mentors,
+.search,
+.profile {
+	height: 800px;
 }
 
 .mentee {
@@ -48,15 +49,11 @@ ul li {
 .description,
 .avatar, 
 .mentee {
-	height: 170px;
+	height: 200px;
 }
 
 .description {
 	border-left: #A67C00 3px solid;
-}
-
-.profile {
-	height: auto;
 }
 
 img {
