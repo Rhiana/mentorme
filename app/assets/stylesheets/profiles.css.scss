@@ -1,3 +1,66 @@
 // Place all the styles related to the profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.navigation a {
+	float: right;
+	padding: 5px;
+
+}
+
+.navigation {
+	margin-top: 10%;
+	background-color: rgba(0, 0, 0, .9);
+	border: #A67C00 1px solid;
+}
+
+.search,
+.mentors,
+.mentee,
+.profile {
+	background-color: rgba(255, 255, 255, .8);
+	border: #A67C00 3px solid;
+}
+
+.search {
+	background-color: #FFBF00;
+	height: 600px;
+}
+
+.mentors {
+	height: 600px;
+}
+
+.mentee {
+	background-color: white;
+}
+
+ul {
+	margin-top: 1em;
+}
+
+ul li {
+	list-style: none;
+	text-align: left;
+}
+
+.description,
+.avatar, 
+.mentee {
+	height: 170px;
+}
+
+.description {
+	border-left: #A67C00 3px solid;
+}
+
+.profile {
+	height: auto;
+}
+
+img {
+	width: 100px;
+	height: 100px;
+	margin-left: 20px;
+}

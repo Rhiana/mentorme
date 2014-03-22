@@ -1,3 +1,48 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+	background-image: url(/assets/Coffee-Farm.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Asul', sans-serif;
+}
+
+
+#welcome_page h1 {
+	color: #FF7100;
+	font-size: 5em;
+}
+
+.sign_in_page {
+	background-color: rgba(255, 255, 255, .8);
+	color: #11421A;
+	border: #FF7100 solid 3px;
+	border-radius: 25px;
+	width: 50%;
+	margin: 10% 25%;
+
+}
+
+.sign_in_page h2 {
+	border-bottom: #FF7100 solid 3px;
+	padding: 1em;
+}
+
+.btn {
+	margin: 0em .5em .5em .5em;
+	float: left;
+	border-radius: 25px;
+	padding: 1em;
+}
+
+p {
+	text-align: left;
+	padding: 1em;
+}
+
+#profile_search {
+	height: 702px;
+}

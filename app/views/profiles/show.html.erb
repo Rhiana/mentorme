@@ -1,8 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class = "container-fluid">
+
+<div class = "row">
+  <div class = "col-xs-12 navigation">
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Edit', edit_profile_path(@profile) %>
+    <%= link_to 'Back', profiles_path %>
+  </div>
+</div>
+
+<span id="notice"><%= notice %></span>
+
+<div class = "row">
+<div class = "col-xs-3 search" id="profile_search">
+<h1>Search for profiles</h1>
+
+
+
+</div>
+
+
+
+<div class = "col-xs-9 profile">
+<p>
+  <%= gravatar_for @profile %>
+</p>
 
 <p>
   <strong>Name:</strong>
-  <%= gravatar_for @profile %>
   <%= @profile.name %>
 </p>
 
@@ -50,6 +74,7 @@
   <strong>What do you want to achieve:</strong>
   <%= @profile.what_do_you_want_to_achieve %>
 </p>
+</div>
+</div>
+</div>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
