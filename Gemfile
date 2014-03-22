@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby "2.0.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -11,8 +12,6 @@ end
 group :production do
 	gem 'pg'
 end
-
-gem 'rails_12factor'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -53,3 +52,5 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'rails_12factor', group: :production
