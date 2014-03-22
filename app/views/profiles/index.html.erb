@@ -37,6 +37,7 @@
       <ul>
         <li><%= link_to profile.name, profile %></li>
         <li><%= profile.tag_line %></li> 
+        <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
       </ul>
     </div>
     <div class = "col-xs-6 description">
