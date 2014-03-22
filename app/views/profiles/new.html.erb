@@ -11,7 +11,18 @@
 <div class = "col-xs-3 search" id="profile_search">
 <h1>Search for profiles</h1>
 
+<%= form_tag("/search", method: "get", :class => "form-control")  do %>
+  <%= label_tag(:mentor, "Looking:") %>
+  <%= text_field_tag(:mentor) %>
 
+  <%= label_tag(:loc, "Location:") %>
+  <%= text_field_tag(:loc) %>
+
+  <%= label_tag(:kw, "Key Words:") %>
+  <%= text_field_tag(:kw) %>
+
+  <%= submit_tag("Search") %>
+<% end %>
 
 </div>
 
