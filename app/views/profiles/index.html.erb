@@ -2,11 +2,8 @@
 
 <div class = "row">
   <div class = "col-xs-12 navigation">
-  <% @profiles.each do |profile| %>
-  <%= link_to 'Edit your profile', edit_profile_path(profile) %>
   <%= link_to 'New Profile', new_profile_path %>
   <%= link_to 'Home', root_path %>
-  <% end %>
   </div>
 </div>
 
@@ -32,8 +29,9 @@
 <div class = "col-xs-9 mentors">
 <h1>Listing profiles</h1>
 
+  
+  <% @profiles.each do |profile| %>
   <div class = "col-xs-12 mentee">
-    <% @profiles.each do |profile| %>
     <div class = "col-xs-3 avatar">
       <%= gravatar_for profile %>
       <ul>
@@ -49,8 +47,8 @@
         <li><%= profile.what_do_you_want_to_achieve %></li>
         </ul>
     </div>
-    <% end %>
   </div>
+  <% end %>
 </div>
 
 
