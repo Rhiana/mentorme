@@ -39,7 +39,8 @@ a {
 	font-size: 1.25em;
 }
 
- input[type=radio] {
+ input[type=radio],
+ input[type="checkbox"] {
     border: 0px;
     width: 20%;
     height: 1.25em;
@@ -99,4 +100,22 @@ img {
 
 #notice {
 	width: 100%;
+}
+
+@media (max-width: 992px) {
+	.main {
+		height: auto;
+	}
+
+}
+
+@media (max-width: 650px) {
+	.description {
+		border-left: none;
+	}
+
+	ul li {
+		text-align: center;
+	}
+
 }

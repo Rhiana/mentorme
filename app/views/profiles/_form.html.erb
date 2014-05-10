@@ -1,4 +1,4 @@
-<%= form_for(@profile, :class => "form-control") do |f| %>
+<%= form_for(@profile, :class => "form-control form-horizontal") do |f| %>
   <% if @profile.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
@@ -11,47 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :class => "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :mentor %><br>
+  <div class="field form-group checkbox">
+    <%= f.label :mentor %>
     <%= f.check_box :mentor %>
   </div>
-  <div class="field">
-    <%= f.label :mentee %><br>
+  <div class="field form-group checkbox">
+    <%= f.label :mentee %>
     <%= f.check_box :mentee %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :post_code %><br>
-    <%= f.text_field :post_code %>
+    <%= f.text_field :post_code, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :tag_line %><br>
-    <%= f.text_field :tag_line %>
+    <%= f.text_field :tag_line, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :meet_up %><br>
-    <%= f.text_field :meet_up %>
+    <%= f.text_field :meet_up, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.text_field :category, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :short_biography %><br>
-    <%= f.text_area :short_biography %>
+    <%= f.text_area :short_biography, :class => "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :what_do_you_want_to_achieve %><br>
-    <%= f.text_area :what_do_you_want_to_achieve %>
+    <%= f.text_area :what_do_you_want_to_achieve, :class => "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class => 'btn btn-default'%>
   </div>
 <% end %>
