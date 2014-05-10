@@ -61,6 +61,11 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def search
+    @profiles = Profile.search params[:search]
+    render 'index'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
@@ -71,4 +76,5 @@ class ProfilesController < ApplicationController
     def profile_params
       params.require(:profile).permit(:name, :mentor, :mentee, :post_code, :email, :tag_line, :meet_up, :catagory, :short_biography, :what_do_you_want_to_achieve)
     end
+
 end
