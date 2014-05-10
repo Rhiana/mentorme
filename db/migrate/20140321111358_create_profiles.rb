@@ -4,14 +4,13 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :name
       t.boolean :mentor
       t.boolean :mentee
-      t.integer :post_code
+      t.string :post_code
       t.string :email
       t.string :tag_line
       t.string :meet_up
-      t.string :catagory
+      t.string :category
       t.text :short_biography
       t.text :what_do_you_want_to_achieve
-
       t.timestamps
     end
   end
