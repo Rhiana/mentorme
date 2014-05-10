@@ -62,7 +62,7 @@ class ProfilesController < ApplicationController
   end
 
   def search
-    @profiles = Profile.search params[:search]
+    @profiles = Profile.search params[:search], params[:person]
     render 'index'
   end
 

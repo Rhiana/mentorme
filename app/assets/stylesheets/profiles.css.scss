@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+	font-size: 1.5em;
+}
 
 .navigation a {
 	float: right;
@@ -25,6 +28,21 @@ a {
 #notice {
 	background-color: rgba(255, 255, 255, .8);
 	border: #A67C00 3px solid;
+}
+
+.form-control {
+	background-color: #FFF !important;
+	height: auto;
+}
+
+.form-group {
+	font-size: 1.25em;
+}
+
+ input[type=radio] {
+    border: 0px;
+    width: 20%;
+    height: 1.25em;
 }
 
 .search {
