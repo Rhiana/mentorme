@@ -1,5 +1,9 @@
 Mentorme::Application.routes.draw do
-  resources :profiles
+  resources :profiles do
+    collection do
+      get :search
+    end
+  end
 
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
