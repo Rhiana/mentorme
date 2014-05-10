@@ -1,57 +1,38 @@
-<div class = "container-fluid">
-
-<div class = "row">
-  <div class = "col-xs-12 navigation">
+<% content_for :page_nav do %>
   <%= link_to 'New Profile', new_profile_path %>
-  <%= link_to 'Home', root_path %>
-  </div>
-</div>
-
-<div class = "row">
-<div class = "col-xs-3 search">
-<h1>Search for profiles</h1>
-
-<%= form_tag("/search", method: "get", :class => "form-control")  do %>
-  <%= label_tag(:mentor, "Looking:") %>
-  <%= text_field_tag(:mentor) %>
-
-  <%= label_tag(:loc, "Location:") %>
-  <%= text_field_tag(:loc) %>
-
-  <%= label_tag(:kw, "Key Words:") %>
-  <%= text_field_tag(:kw) %>
-
-  <%= submit_tag("Search") %>
 <% end %>
 
-</div>
-
-<div class = "col-xs-9 mentors">
 <h1>Listing profiles</h1>
 
-  
-  <% @profiles.each do |profile| %>
-  <div class = "col-xs-12 mentee">
-    <div class = "col-xs-3 avatar">
-      <%= gravatar_for profile %>
-      <ul>
-        <li><%= link_to profile.name, profile %></li>
-        <li><%= profile.tag_line %></li> 
-        <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </ul>
-    </div>
-    <div class = "col-xs-6 description">
-      <ul>
-        <li>I want to meet <%= profile.meet_up %></li>
-        <li><%= profile.catagory %></li>
-        <li><%= profile.short_biography %></li>
-        <li><%= profile.what_do_you_want_to_achieve %></li>
-        </ul>
-    </div>
+<% @profiles.each do |profile| %>
+<div class = "col-xs-12 mentee">
+  <div class = "col-xs-3 avatar">
+    <%= gravatar_for profile unless profile.email.blank? %>
+    <ul>
+      <li><%= link_to profile.name, profile %></li>
+      <li><%= profile.tag_line %></li>
+      <%= link_to 'Delete', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </ul>
   </div>
-  <% end %>
-</div>
+  <div class = "col-xs-6 description">
+    <ul>
+      <%= content_tag(:li) do
+        "I want to meet at: #{profile.meet_up}"
+      end unless profile.meet_up.blank? %>
 
+      <%= content_tag(:li) do
+        "I know lots about: #{profile.category}"
+      end unless profile.category.blank? %>
 
+      <%= content_tag(:li) do
+        "A bit about me: #{profile.short_biography}"
+      end unless profile.short_biography.blank? %>
+
+      <%= content_tag(:li) do
+        "I would like to achieve: #{profile.what_do_you_want_to_achieve}"
+      end unless profile.what_do_you_want_to_achieve.blank? %>
+
+      </ul>
+  </div>
 </div>
-</div>
+<% end %>

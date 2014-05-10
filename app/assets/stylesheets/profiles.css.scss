@@ -21,7 +21,8 @@ a {
 .search,
 .mentors,
 .mentee,
-.profile {
+.profile,
+#notice {
 	background-color: rgba(255, 255, 255, .8);
 	border: #A67C00 3px solid;
 }
@@ -30,10 +31,18 @@ a {
 	background-color: #FFBF00;
 }
 
+.main {
+	height: 900px;
+}
+
+.profile {
+	overflow-y: auto;
+}
+
 .mentors,
 .search,
 .profile {
-	height: 800px;
+	height: inherit;
 }
 
 .mentee {
@@ -50,7 +59,7 @@ ul li {
 }
 
 .description,
-.avatar, 
+.avatar,
 .mentee {
 	height: 200px;
 }
@@ -68,4 +77,8 @@ img {
 .form-control {
 	background-color: inherit;
 	border: none;
+}
+
+#notice {
+	width: 100%;
 }

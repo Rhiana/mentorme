@@ -5,12 +5,33 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <link href='http://fonts.googleapis.com/css?family=Asul' rel='stylesheet' type='text/css'>
+ <!-- <link href='http://fonts.googleapis.com/css?family=Asul' rel='stylesheet' type='text/css'>-->
 
 </head>
 <body>
 <div class="container">
-	<%= yield %>
+	<div class = "container-fluid">
+	<% unless notice.blank? %>
+		<span id="notice"><%= notice %></span>
+	<% end %>
+		<div class = "row">
+	  		<div class = "col-xs-12 navigation">
+	  		<%= link_to 'Home', root_path %>
+	  		<%= yield :page_nav %>
+	  		</div>
+		</div>
+		<div class = "row main">
+			<div class = "col-xs-3 search">
+			<h1>Search for profiles</h1>
+			  <div id="search">
+			    <%= render :partial => 'profiles/search' %>
+			  </div>
+			</div>
+			<div class = "col-xs-9 profile">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

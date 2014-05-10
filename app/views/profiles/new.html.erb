@@ -1,36 +1,7 @@
-<div class = "container-fluid">
-<span id="notice"><%= notice %></span>
-<div class = "row">
-  <div class = "col-xs-12 navigation">
-    <%= link_to 'Home', root_path %>
-    <%= link_to 'Back', profiles_path %>
-  </div>
-</div>
-
-<div class = "row">
-<div class = "col-xs-3 search" id="profile_search">
-<h1>Search for profiles</h1>
-
-<%= form_tag("/search", method: "get", :class => "form-control")  do %>
-  <%= label_tag(:mentor, "Looking:") %>
-  <%= text_field_tag(:mentor) %>
-
-  <%= label_tag(:loc, "Location:") %>
-  <%= text_field_tag(:loc) %>
-
-  <%= label_tag(:kw, "Key Words:") %>
-  <%= text_field_tag(:kw) %>
-
-  <%= submit_tag("Search") %>
+<% content_for :page_nav do %>
+  <%= link_to 'Back', profiles_path %>
 <% end %>
 
-</div>
-
-<div class = "col-xs-9 profile">
 <h1>New profile</h1>
 
 <%= render 'form' %>
-
-</div>
-</div>
-</div>
